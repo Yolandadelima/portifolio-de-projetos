@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo & Cidade: Tudo a Ver!</title>
+    <style>
+        :root {
+            --verde-campo: #4CAF50;
+            --azul-cidade: #2196F3;
+            --amarelo: #FFC107;
+            --fundo: #f9f9f9;
+            --texto: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--verde-campo), var(--azul-cidade));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitulo {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+
+        .destaque {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            color: var(--verde-campo);
+            margin-bottom: 0.5rem;
+        }
+
+        .card.cidade h3 {
+            color: var(--azul-cidade);
+        }
+
+        .curiosidades {
+            background-color: var(--amarelo);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .curiosidades h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .curiosidades ul {
+            list-style-type: none;
+        }
+
+        .curiosidades li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .curiosidades li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--verde-campo);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Campo & Cidade: Tudo a Ver!</h1>
+        <p class="subtitulo">Descubra como esses dois mundos se conectam no seu dia a dia</p>
+    </header>
+
+    <!-- INTRODUÇÃO -->
+    <div class="container">
+        <section class="intro">
+            <p>Você já parou pra pensar como <strong>a comida que chega no seu prato</strong> viajou do campo até a cidade? Ou como a <strong>tecnologia que você usa</strong> ajuda os agricultores? Vamos explorar essa conexão!</p>
+        </section>
+
+        <!-- DESTAQUE -->
+        <section class="destaque">
+            <h2 style="text-align: center; color: var(--verde-campo);">Do plantio ao seu celular: como tudo se conecta</h2>
+            <p>O campo e a cidade não são opostos – eles <strong>precisam um do outro</strong>! Enquanto o campo produz alimentos, a cidade oferece tecnologia, educação e mercados. Juntos, formam um ciclo que mantém todo mundo funcionando.</p>
+        </section>
+
+        <!-- CARDS - CAMPO -->
+        <h2 style="color: var(--verde-campo); margin-top: 2rem;">🌱 O Campo Que Alimenta a Cidade</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Agricultura">
+                <div class="card-content">
+                    <h3>De onde vem sua comida?</h3>
+                    <p>70% dos alimentos que chegam às cidades vêm de pequenos agricultores. Eles plantam, colhem e enviam tudo pra gente!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vida no campo">
+                <div class="card-content">
+                    <h3>Não é só roça!</h3>
+                    <p>O campo também tem tecnologia: drones, apps de plantio e máquinas modernas ajudam a produzir mais com menos desperdício.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Feira">
+                <div class="card-content">
+                    <h3>Feira direto do produtor</h3>
+                    <p>Muitas cidades têm feiras onde você compra direto do agricultor, pagando menos e ajudando quem realmente produz.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARDS - CIDADE -->
+        <h2 style="color: var(--azul-cidade); margin-top: 2rem;">🏙️ A Cidade Que Apoia o Campo</h2>
+        <div class="grid">
+            <div class="card cidade">
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mercado">
+                <div class="card-content">
+                    <h3>Mercados e restaurantes</h3>
+                    <p>Os chefs urbanos transformam produtos rurais em pratos incríveis, valorizando o trabalho do campo.</p>
+                </div>
+            </div>
+
+            <div class="card cidade">
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tecnologia">
+                <div class="card-content">
+                    <h3>Tecnologia a favor</h3>
+                    <p>Apps ajudam agricultores a vender direto pro consumidor, sem intermediários. Já usou um pra comprar orgânicos?</p>
+                </div>
+            </div>
+
+            <div class="card cidade">
+                <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Turismo rural">
+                <div class="card-content">
+                    <h3>Turismo rural</h3>
+                    <p>Muita gente da cidade visita fazendas pra aprender sobre plantio, colher frutas e fugir do estresse urbano.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURIOSIDADES -->
+        <section class="curiosidades">
+            <h2>🤔 Sabia disso?</h2>
+            <ul>
+                <li><strong>1 agricultor alimenta até 150 pessoas</strong> – sem eles, a cidade não teria comida!</li>
+                <li><strong>Feiras livres</strong> são a forma mais antiga de conectar campo e cidade – e ainda são super importantes.</li>
+                <li><strong>Agricultura urbana</strong> está crescendo: tem gente plantando até em apartamento!</li>
+                <li>Muitos <strong>influencers digitais</strong> mostram a vida no campo e fazem sucesso na cidade.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2023 - Campo & Cidade | Feito com ♥ para quem curte saber de onde vêm as coisas</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Nenhum login necessário! Aproveite o conteúdo livremente.</p>
+    </footer>
+</body>
+</html>
